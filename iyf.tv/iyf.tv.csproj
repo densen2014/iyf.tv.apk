@@ -45,14 +45,14 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-    <!-- 指定发布时支持的ABI为armeabi-v7a 和 arm64-v8a -->
-		<AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
+	<!-- 指定发布时支持的 ABI 为 armeabi-v7a 和 arm64-v8a -->
+	<RuntimeIdentifiers>android-arm;android-arm64</RuntimeIdentifiers>
 	</PropertyGroup>
 
  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net10.0-android|AnyCPU'">
   <AndroidPackageFormat>apk</AndroidPackageFormat>
-	<AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
-	</PropertyGroup>
+  <RuntimeIdentifiers>android-arm;android-arm64</RuntimeIdentifiers>
+  </PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
