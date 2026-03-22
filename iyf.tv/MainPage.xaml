@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="iyf.tv.MainPage">
     <Grid>
-        <WebView Source="https://www.yfsp.tv"
+        <WebView x:Name="webView" Source="https://app1.es/pda"
                  HorizontalOptions="FillAndExpand"
                  VerticalOptions="FillAndExpand" />
     </Grid>
